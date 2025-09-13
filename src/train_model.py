@@ -4,7 +4,7 @@ import pickle as pkl
 import pandas as pd
 from itertools import combinations_with_replacement
 
-data = pd.read_csv("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/data/cleaned_data_final.csv")
+data = pd.read_csv("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/data/cleaned_data.csv")
 
 
 #isolating the target variable and vectorizing it for matrix operations
@@ -34,7 +34,7 @@ class Regression:
         #intializing theta with small random values
         theta = np.random.rand(X.shape[1],1) * 0.01
         Lambda = 0.01
-        alpha = 0.01
+        alpha = 0.03
         iterations = 5000
         m = X.shape[0]
         
@@ -234,16 +234,15 @@ def main():
     model = Regression()
     # Run K-fold cross-validation
     avg_perf, predictions, perf_per_bucket = model.KCV(
-        X, y, k=5, regularization="L2", method="gradient_descent", polynomial=2
+        X, y, k=5, regularization="L1", method="gradient_descent", polynomial=2
     )
 
     print("Average Performance:", avg_perf)
 
-    # Plot predicted vs actual values
-    plot_predictions(predictions)
-
     
 
+    #model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final.pkl")
+    
 
 
 
