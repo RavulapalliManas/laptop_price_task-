@@ -97,14 +97,18 @@ class Regression:
     
     def polynomial_features(self, X, degree):
         X = np.array(X)
-        num_samples, num_features = X.shape
-        poly = []
+        if degree == 1:
+            return X
         
-        for deg in range(1, degree + 1):
-            for items in combinations_with_replacement(range(num_features), deg):
-                new_feature = np.prod(X[:, items], axis=1)
-                poly.append(new_feature)
-        return np.vstack(poly).T
+        else: 
+            m, n = X.shape
+            poly = [X]
+            
+            for deg in range(1, degree + 1):
+                for items in combinations_with_replacement(range(n), deg):
+                    new_feature = np.prod(X[:, items], axis=1, keepdims=True)
+                    poly.append(new_feature)
+            return np.hstack(poly)
 
     #Training and testing the models performance using K fold cross validation. 
     def KCV(self, X, y, k, regularization= "none", method = "none", polynomial = 1):
