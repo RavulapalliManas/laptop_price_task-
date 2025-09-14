@@ -1,0 +1,151 @@
+Intercept: 11606.622671
+Inches: 3017.979332
+Ram: 5266.020749
+Weight: -696.535000
+cpu_speed: 3764.766161
+Hybrid: 441.876442
+SSD: 2631.774359
+HDD: -112.684738
+FlashStorage: 0.005042
+Resolution_Height: 2762.098293
+Company_Acer: -602.792606
+Company_Apple: 1316.681720
+Company_Asus: -567.063021
+Company_Chuwi: 240.079882
+Company_Dell: 1867.389384
+Company_Fujitsu: 214.118312
+Company_Google: 536.165230
+Company_HP: 1812.802654
+Company_Huawei: -808.098749
+Company_LG: 772.335596
+Company_Lenovo: 82.365049
+Company_MSI: 1307.411753
+Company_Mediacom: -255.112337
+Company_Microsoft: 631.624252
+Company_Razer: 2951.804033
+Company_Samsung: -235.831038
+Company_Toshiba: 1525.772030
+Company_Vero: -500.358168
+Company_Xiaomi: 1311.877465
+TypeName_2 in 1 Convertible: 808.056929
+TypeName_Gaming: 2898.324516
+TypeName_Netbook: 479.653530
+TypeName_Notebook: 1127.093107
+TypeName_Ultrabook: 2030.946760
+TypeName_Workstation: 4257.032816
+OpSys_Android: -478.839354
+OpSys_Chrome OS: 881.974587
+OpSys_Linux: 244.018965
+OpSys_Mac OS X: 251.661814
+OpSys_No OS: -352.167183
+OpSys_Windows 10: 3208.920084
+OpSys_Windows 10 S: 631.618798
+OpSys_Windows 7: 6148.924050
+OpSys_macOS: 1065.018434
+cpu_company_AMD: 1282.723986
+cpu_company_Intel: 10318.360795
+cpu_company_Samsung: 0.009157
+Gpu_AMD FirePro W4190M: -699.970274
+Gpu_AMD FirePro W4190M : 908.341777
+Gpu_AMD FirePro W5130M: -78.875588
+Gpu_AMD FirePro W6150M: 1234.251185
+Gpu_AMD R17M-M1-70: 0.009875
+Gpu_AMD R4 Graphics: 0.001167
+Gpu_AMD Radeon 520: -785.731570
+Gpu_AMD Radeon 530: -1260.013515
+Gpu_AMD Radeon Pro 455: 430.820989
+Gpu_AMD Radeon Pro 555: 0.007610
+Gpu_AMD Radeon Pro 560: 0.004297
+Gpu_AMD Radeon R2: -410.445766
+Gpu_AMD Radeon R2 Graphics: -8.432607
+Gpu_AMD Radeon R3: -123.810087
+Gpu_AMD Radeon R4: -34.316552
+Gpu_AMD Radeon R4 Graphics: 243.859445
+Gpu_AMD Radeon R5: -143.247913
+Gpu_AMD Radeon R5 430: 243.919091
+Gpu_AMD Radeon R5 520: 0.002315
+Gpu_AMD Radeon R5 M330: -746.500928
+Gpu_AMD Radeon R5 M420: -1285.461341
+Gpu_AMD Radeon R5 M420X: -395.917287
+Gpu_AMD Radeon R5 M430: -1535.763059
+Gpu_AMD Radeon R7: -679.403804
+Gpu_AMD Radeon R7 Graphics: 226.157440
+Gpu_AMD Radeon R7 M360: 0.003275
+Gpu_AMD Radeon R7 M365X: 293.107491
+Gpu_AMD Radeon R7 M440: 204.759460
+Gpu_AMD Radeon R7 M445: -1336.721699
+Gpu_AMD Radeon R7 M460: -787.015615
+Gpu_AMD Radeon R9 M385: 194.749109
+Gpu_AMD Radeon RX 540: 615.061278
+Gpu_AMD Radeon RX 550: 1669.327877
+Gpu_AMD Radeon RX 580: 334.530660
+Gpu_ARM Mali T860 MP4: 0.005968
+Gpu_Intel Graphics 620: 0.003025
+Gpu_Intel HD Graphics: -618.615623
+Gpu_Intel HD Graphics 400: -712.416689
+Gpu_Intel HD Graphics 405: -778.117891
+Gpu_Intel HD Graphics 500: -587.022481
+Gpu_Intel HD Graphics 505: -421.059211
+Gpu_Intel HD Graphics 510: -290.770376
+Gpu_Intel HD Graphics 515: 225.939002
+Gpu_Intel HD Graphics 520: 1027.991426
+Gpu_Intel HD Graphics 5300: 10.355155
+Gpu_Intel HD Graphics 540: 0.009643
+Gpu_Intel HD Graphics 6000: 692.379248
+Gpu_Intel HD Graphics 615: 778.847382
+Gpu_Intel HD Graphics 620: -896.089123
+Gpu_Intel HD Graphics 620 : 235.881651
+Gpu_Intel HD Graphics 630: 0.008493
+Gpu_Intel Iris Graphics 540: -49.851553
+Gpu_Intel Iris Graphics 550: 0.007667
+Gpu_Intel Iris Plus Graphics 640: 905.695805
+Gpu_Intel Iris Plus Graphics 650: 173.857647
+Gpu_Intel Iris Pro Graphics: 0.005045
+Gpu_Intel UHD Graphics 620: 639.395291
+Gpu_Nvidia GeForce 150MX: 191.679441
+Gpu_Nvidia GeForce 920: 53.937695
+Gpu_Nvidia GeForce 920M: -385.218065
+Gpu_Nvidia GeForce 920MX: -467.421277
+Gpu_Nvidia GeForce 920MX : -319.867147
+Gpu_Nvidia GeForce 930M: 69.862135
+Gpu_Nvidia GeForce 930MX: -25.918950
+Gpu_Nvidia GeForce 930MX : 147.743152
+Gpu_Nvidia GeForce 940M: 0.009174
+Gpu_Nvidia GeForce 940MX: -590.025573
+Gpu_Nvidia GeForce 960M: 1867.981551
+Gpu_Nvidia GeForce GT 940MX: 128.936227
+Gpu_Nvidia GeForce GTX 1050: 423.866435
+Gpu_Nvidia GeForce GTX 1050 Ti: -288.869875
+Gpu_Nvidia GeForce GTX 1050M: -323.916465
+Gpu_Nvidia GeForce GTX 1050Ti: -109.522309
+Gpu_Nvidia GeForce GTX 1060: 1784.811883
+Gpu_Nvidia GeForce GTX 1070: 2337.998630
+Gpu_Nvidia GeForce GTX 1070M: 1342.958838
+Gpu_Nvidia GeForce GTX 1080: 2216.893568
+Gpu_Nvidia GeForce GTX 930MX: -740.456563
+Gpu_Nvidia GeForce GTX 940M: -300.207068
+Gpu_Nvidia GeForce GTX 940MX: -651.846750
+Gpu_Nvidia GeForce GTX 950M: -655.742633
+Gpu_Nvidia GeForce GTX 960: -1519.275250
+Gpu_Nvidia GeForce GTX 960<U+039C>: -362.837058
+Gpu_Nvidia GeForce GTX 960M: -245.357445
+Gpu_Nvidia GeForce GTX 965M: -998.730955
+Gpu_Nvidia GeForce GTX 970M: 511.526824
+Gpu_Nvidia GeForce GTX 980 : 2149.894554
+Gpu_Nvidia GeForce GTX 980M: -45.602898
+Gpu_Nvidia GeForce GTX1050 Ti: -834.681480
+Gpu_Nvidia GeForce GTX1060: 128.918338
+Gpu_Nvidia GeForce GTX1080: 2082.048322
+Gpu_Nvidia GeForce MX130: -847.674183
+Gpu_Nvidia GeForce MX150: 578.453829
+Gpu_Nvidia Quadro 3000M: 74.731520
+Gpu_Nvidia Quadro M1000M: -741.709208
+Gpu_Nvidia Quadro M1200: 1382.383929
+Gpu_Nvidia Quadro M2000M: 1131.125317
+Gpu_Nvidia Quadro M2200: 228.954636
+Gpu_Nvidia Quadro M2200M: 1478.210276
+Gpu_Nvidia Quadro M3000M: 2671.418854
+Gpu_Nvidia Quadro M500M: 835.452298
+Gpu_Nvidia Quadro M520M: -901.042758
+Gpu_Nvidia Quadro M620: 556.810746
+Gpu_Nvidia Quadro M620M: 1957.193589

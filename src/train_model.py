@@ -274,7 +274,7 @@ def main():
         for feat, val in theta_with_features:
             f.write(f"{feat}: {val:.6f}\n")
 
-    model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
+    #model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
     
 
 
