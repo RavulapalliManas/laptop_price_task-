@@ -228,7 +228,7 @@ def plot_predictions(predictions):
     plt.suptitle('Predicted vs. Actual Values per Fold')
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.show()
-\
+
 def main():
     
     model = Regression()
