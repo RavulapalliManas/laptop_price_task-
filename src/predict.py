@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle as pkl
 from train_model import Regression, Metrics
-from data_preprocessing import preprocess_data  # your preprocessing function
+from data_preprocessing import preprocess
 
 def main():
     parser = argparse.ArgumentParser()
@@ -16,7 +16,7 @@ def main():
     # Load dataset
     data = pd.read_csv(args.data_path)
 
-    cleaned_data = preprocess_data(data)
+    cleaned_data = preprocess(data)
     
     # Separate features and target variable
     X = cleaned_data.drop(columns=['Price'])

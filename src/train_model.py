@@ -37,8 +37,8 @@ class Regression:
         theta = np.random.rand(X.shape[1],1) * 0.01
 
         #initializing hyperparameters and epochs
-        Lambda = 0.01
-        alpha = 0.1
+        Lambda = 0.1
+        alpha = 0.05
         iterations = 10000
         
         #initializeing the rows and columns
@@ -249,14 +249,14 @@ def main():
     model = Regression()
     # Run K-fold cross-validation
     avg_perf, predictions, perf_per_bucket = model.KCV(
-        X, y, k=5, regularization="L2", method="normal_equation", polynomial=1
+        X, y, k=5, regularization="L1", method="gradient_descent", polynomial=2
     )
 
     print("Average Performance:", avg_perf)
 
     
 
-    model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
+    #model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
 
 
 
