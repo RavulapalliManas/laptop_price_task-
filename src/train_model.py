@@ -196,23 +196,27 @@ class kfoldcv:
         return buckets
 
    
-            
-        
-class Metrics:
 
-    #mean squared error function
-    @staticmethod
-    def mse(y, y_hat):
-        return np.mean((y - y_hat) ** 2)
+
+class Metrics:
     
-    #root mean squared error function
     @staticmethod
+    #mean squared error
+    def mse(y, y_hat):
+        y = np.ravel(y)       
+        y_hat = np.ravel(y_hat)
+        return np.mean((y - y_hat) ** 2)
+
+    @staticmethod
+    #rootmeansquared error
     def rmse(y, y_hat):
         return np.sqrt(Metrics.mse(y, y_hat))
 
-    #R2 score function 
     @staticmethod
-    def r2_score(y, y_hat):       
+    #r^2 score   
+    def r2_score(y, y_hat):
+        y = np.ravel(y)       
+        y_hat = np.ravel(y_hat)
         ss_total = np.sum((y - np.mean(y)) ** 2)
         ss_res = np.sum((y - y_hat) ** 2)
         return 1 - (ss_res / ss_total)

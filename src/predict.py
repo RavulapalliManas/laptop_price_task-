@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import pickle as pkl
 from train_model import Regression, Metrics
-from data_preprocessing import pre_process
+from data_preprocessing import pre_process  
+import os
 
 def main():
     parser = argparse.ArgumentParser()
@@ -12,9 +13,15 @@ def main():
     parser.add_argument('--metrics_output_path', type=str, required=True)
     parser.add_argument('--predictions_output_path', type=str, required=True)
     args = parser.parse_args()
- 
+    
+    # Convert all paths to absolute paths
+    model_path = os.path.abspath(args.model_path)
+    data_path = os.path.abspath(args.data_path)
+    metrics_output_path = os.path.abspath(args.metrics_output_path)
+    predictions_output_path = os.path.abspath(args.predictions_output_path)
+    
     # Load dataset
-    data = pd.read_csv(args.data_path)
+    data = pd.read_csv(data_path)
 
     cleaned_data = pre_process(data)
     
@@ -26,7 +33,7 @@ def main():
     
     
     # Load the trained model
-    with open(args.model_path, 'rb') as f:
+    with open(model_path, 'rb') as f:
         model = pkl.load(f)
     
     # Make predictions
@@ -34,7 +41,7 @@ def main():
     
     # Save predictions to CSV
     predictions_df = pd.DataFrame({'prediction': predictions})
-    predictions_df.to_csv(args.predictions_output_path, index=False)
+    predictions_df.to_csv(predictions_output_path, index=False)
     
     print("y sample:", y[:5].flatten())
     print("predictions sample:", predictions[:5])
@@ -44,7 +51,7 @@ def main():
     rmse = Metrics.rmse(y, predictions)
     r2 = Metrics.r2_score(y, predictions)
 
-    with open(args.metrics_output_path, 'w') as f:
+    with open(metrics_output_path, 'w') as f:
         f.write(f"Mean Squared Error: {mse}\n")
         f.write(f"Root Mean Squared Error: {rmse}\n")
         f.write(f"R2 Score: {r2}\n")
