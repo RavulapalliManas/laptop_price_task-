@@ -13,8 +13,6 @@ y = np.array(y).reshape(-1,1)
 
 #Isolating the features and getting the number rows and columns for future use 
 X = data.drop(columns=['Price'])
-X = np.c_[np.ones(X.shape[0]), X]
-m,n = X.shape
 
 
 class Regression:
@@ -25,18 +23,27 @@ class Regression:
         self.cost_history = []
         
     def linear_regression(self, X, y, regularization= "none", method = "none", polynomial = 1): 
+        
+        
         #Since Matrix operations are faster in numpy better to convert them       
         X = np.array(X)
         y = np.array(y)
         self.degree = polynomial
         if polynomial > 1:
             X = self.polynomial_features(X, degree=polynomial)
+        
         #intializing theta with small random values
+        X = np.c_[np.ones(X.shape[0]), X]
         theta = np.random.rand(X.shape[1],1) * 0.01
+
+        #initializing hyperparameters and epochs
         Lambda = 0.01
-        alpha = 0.03
-        iterations = 5000
+        alpha = 0.1
+        iterations = 10000
+        
+        #initializeing the rows and columns
         m = X.shape[0]
+        n = X.shape[1]
         
         #Normal Equation 
         if method == "normal_equation":
@@ -92,19 +99,21 @@ class Regression:
             
             self.theta = theta
             self.cost_history.append(cost_history_fold)
+        
         else:
             raise ValueError("Invalid method type")
-    
+        
     def polynomial_features(self, X, degree):
         X = np.array(X)
         if degree == 1:
             return X
         
         else: 
+            
             m, n = X.shape
             poly = [X]
             
-            for deg in range(1, degree + 1):
+            for deg in range(2, degree + 1):
                 for items in combinations_with_replacement(range(n), deg):
                     new_feature = np.prod(X[:, items], axis=1, keepdims=True)
                     poly.append(new_feature)
@@ -151,9 +160,11 @@ class Regression:
         X = np.array(X)
         if hasattr(self,"degree") and self.degree > 1:
             X = self.polynomial_features(X, degree=self.degree)
-        #y_hat is the predicted value 
-        return X @ self.theta
-    
+
+        X_final = np.c_[np.ones(X.shape[0]), X]
+        #y_hat is the predicted value
+        return X_final @ self.theta
+
     #save model
     def save(self, file):
         with open(file, 'wb') as f:
@@ -232,22 +243,20 @@ def plot_predictions(predictions):
     plt.suptitle('Predicted vs. Actual Values per Fold')
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.show()
-
+\
 def main():
     
     model = Regression()
     # Run K-fold cross-validation
     avg_perf, predictions, perf_per_bucket = model.KCV(
-        X, y, k=5, regularization="L1", method="gradient_descent", polynomial=2
+        X, y, k=5, regularization="L2", method="normal_equation", polynomial=1
     )
 
     print("Average Performance:", avg_perf)
 
     
 
-    #model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final.pkl")
-    
-
+    model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
 
 
 
