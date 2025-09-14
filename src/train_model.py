@@ -13,8 +13,6 @@ y = np.array(y).reshape(-1,1)
 
 #Isolating the features and getting the number rows and columns for future use 
 X = data.drop(columns=['Price'])
-
-
 class Regression:
     def __init__(self, regularization= "none", method = "none"):
         self.method = method
@@ -249,7 +247,6 @@ def plot_predictions(predictions):
     plt.show()
 \
 def main():
-    
     model = Regression()
     # Run K-fold cross-validation
     avg_perf, predictions, perf_per_bucket = model.KCV(
@@ -278,10 +275,10 @@ def main():
         for feat, val in theta_with_features:
             f.write(f"{feat}: {val:.6f}\n")
 
-    #model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
+    model.save("/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/models/regression_model_final2.pkl")
     
 
 
 
 if __name__ == "__main__":
-    main()  
+    main()

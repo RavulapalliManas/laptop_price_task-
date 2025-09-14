@@ -68,9 +68,12 @@ def pre_process(df):
     categorical_cols = ["Company", "TypeName", "OpSys", "cpu_company", "Gpu"]
 
     df = pd.get_dummies(df, columns=categorical_cols, drop_first=False, dtype=int)
-
-    output_path = "/Users/avi/Desktop/university/sem_5/Machine_Learning/Avi_Dhall_A1/laptop_price_task-/data/clean.csv"
-    df.to_csv(output_path, index=False)
+    df.drop(columns=["FlashStorage"], inplace=True)
+    
+    return df
+    
+    # output_path = "/Users/manasvenkatasairavulapalli/Desktop/Computer Science stuff/Pure CS/Introduction to Machine Learning/Assignments/laptop_price_task-/data/cleaned_data.csv"
+    # df.to_csv(output_path, index=False)
 
 # Load the CSV into a DataFrame
 # file_path = "/Users/avi/Desktop/university/sem_5/Machine_Learning/Avi_Dhall_A1/laptop_price_task-/data/train_data.csv"

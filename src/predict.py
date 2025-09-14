@@ -26,8 +26,8 @@ def main():
     cleaned_data = pre_process(data)
     
     # Separate features and target variable
-    X = cleaned_data.drop(columns=['Life expectancy'])
-    y = cleaned_data['Life expectancy'].values.reshape(-1, 1)
+    X = cleaned_data.drop(columns=['Price'])
+    y = cleaned_data['Price'].values.reshape(-1, 1)
     X = np.array(X)
     y = np.array(y)
     
